@@ -1,0 +1,308 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* css reset end */
+
+:root {
+  /* --background: white;
+  --text: black;
+  --line: black; */
+  --background: rgb(32, 32, 32);
+  --text: white;
+  --line: rgb(211, 211, 211);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0 7em 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* home start */
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--line);
+}
+
+.home .navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  font-size: 1.3em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.home .navbar a {
+  padding-bottom: 0.5em;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.1s;
+}
+.home .navbar a:hover {
+  border-bottom: 3px solid var(--line);
+}
+
+.home h1 {
+  font-weight: 500;
+  font-size: 6.5em;
+  letter-spacing: 1px;
+}
+
+.home .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.home .socials {
+  display: flex;
+  font-size: 18px;
+}
+
+.home .socials a:not(:nth-child(6)) {
+  margin-right: 40px;
+}
+
+.home .socials a {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.1s;
+}
+
+.home .socials a:hover {
+  border-bottom: 2px solid var(--line);
+}
+/* home end */
+
+.about,
+.skills,
+.works,
+.education,
+.certification,
+.contact {
+  padding: 50px 0;
+}
+
+.about,
+.skills,
+.works,
+.education,
+.certification {
+  border-bottom: 0.5px solid var(--line);
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 3.5em;
+  width: 500px;
+}
+
+.list,
+.about p {
+  font-size: 18px;
+  width: 60%;
+}
+/* about start */
+.about {
+  display: flex;
+}
+/* about end */
+
+/* skills start */
+.skills {
+}
+/* skills end */
+
+/* works start */
+.works {
+}
+/* works end */
+
+/* education start */
+.education {
+}
+/* education end */
+
+/* certification start */
+.certification {
+}
+/* certification end */
+
+/* contact start */
+.contact {
+  display: flex;
+}
+
+.contact a {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.1s;
+}
+
+.contact a:hover {
+  border-bottom: 2px solid var(--line);
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.contact .phone,
+.contact .socials {
+  padding: 1.3em 0;
+}
+
+.contact .email,
+.contact .phone {
+  border-bottom: 1px solid var(--line);
+}
+
+.contact .email {
+  padding-bottom: 1.5em;
+}
+
+.contact li:not(:nth-child(4)) {
+  margin-bottom: 15px;
+}
+/* contact end */
