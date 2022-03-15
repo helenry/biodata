@@ -39,7 +39,6 @@ small,
 strike,
 strong,
 sub,
-sup,
 tt,
 var,
 b,
@@ -133,9 +132,9 @@ table {
   /* --background: white;
   --text: black;
   --line: black; */
-  --background: rgb(32, 32, 32);
-  --text: white;
-  --line: rgb(211, 211, 211);
+  --background: white;
+  --text: black;
+  --line: black;
 }
 
 html {
@@ -145,7 +144,6 @@ html {
 body {
   background-color: var(--background);
   color: var(--text);
-  margin: 0 7em 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
@@ -166,26 +164,21 @@ a {
 
 .home .navbar {
   display: flex;
-  justify-content: space-between;
-  padding-top: 40px;
-  font-size: 1.3em;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  justify-content: flex-end;
+  padding: 40px 0 10px;
+  font-size: 1em;
+  margin: 0 85px;
+  border-bottom: 1px solid var(--line);
+  text-transform: uppercase;
 }
 
 .home .navbar a {
-  padding-bottom: 0.5em;
-  border-bottom: 4px solid transparent;
-  transition: border-bottom 0.1s;
-}
-.home .navbar a:hover {
-  border-bottom: 3px solid var(--line);
+  margin-left: 70px;
 }
 
-.home h1 {
-  font-weight: 500;
-  font-size: 6.5em;
-  letter-spacing: 1px;
+h1 {
+  margin: 0 85px;
+  font-size: 5em;
 }
 
 .home .bottom {
@@ -193,12 +186,12 @@ a {
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 40px;
+  margin: 0 85px;
 }
 
 .home .socials {
   display: flex;
   align-items: center;
-  font-size: 18px;
 }
 
 .home .socials a:not(:nth-child(6)) {
@@ -212,7 +205,8 @@ a {
 .education,
 .certification,
 .contact {
-  padding: 60px 0;
+  padding: 30px 0 90px;
+  margin: 0 85px;
 }
 
 .about,
@@ -224,19 +218,33 @@ a {
 }
 
 h2 {
-  font-weight: 500;
-  font-size: 3.5em;
-  width: 500px;
+  /* font-weight: 500; */
+  font-size: 3em;
+  width: 600px;
 }
 
-.list,
-.about p {
-  font-size: 18px;
-  width: 60%;
+.list {
+  font-size: 17px;
+  width: 1000px;
 }
 /* about start */
 .about {
   display: flex;
+  justify-content: space-between;
+}
+
+.about .list div {
+  display: flex;
+  align-items: center;
+}
+
+.about .list div:not(:last-child) {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+}
+
+.about .list div:not(:first-child) {
+  padding-top: 20px;
 }
 /* about end */
 
@@ -252,6 +260,21 @@ h2 {
 
 /* education start */
 .education {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education h3 {
+  font-size: 1.3em;
+}
+
+.education img {
+  width: 250px;
 }
 /* education end */
 
@@ -263,6 +286,7 @@ h2 {
 /* contact start */
 .contact {
   display: flex;
+  justify-content: space-between;
 }
 
 .contact a {
@@ -274,30 +298,40 @@ h2 {
   border-bottom: 2px solid var(--line);
 }
 
-h3 {
-  font-size: 1.5em;
-  font-weight: 500;
-  margin-bottom: 20px;
+h3:not(.education h3) {
+  font-size: 1.3em;
+  width: 250px;
 }
 
-.contact .email,
-.contact .phone {
+.socials h3 {
+  align-self: baseline;
+}
+
+.contact .list div {
+  display: flex;
+  align-items: center;
+}
+
+.contact .list div:not(:last-child) {
   border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
 }
 
-.contact .email {
-  padding-bottom: 30px;
+.contact .list div:not(:first-child) {
+  padding-top: 20px;
 }
 
-.contact .phone {
-  padding: 30px 0;
-}
-
-.contact .socials {
-  padding-top: 30px;
-}
-
-.contact li:not(:nth-child(4)) {
+.contact li:not(:last-child) {
   margin-bottom: 15px;
 }
 /* contact end */
+
+@media only screen and (min-width: 1920px) {
+  .list {
+    width: 1100px;
+  }
+
+  .education img {
+    width: 450px;
+  }
+}
