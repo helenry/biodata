@@ -131,9 +131,9 @@ table {
   /* --background: white;
   --text: black;
   --line: black; */
-  --background: white;
-  --text: #222;
-  --line: #555;
+  --background: rgb(12, 12, 12);
+  --text: #eee;
+  --line: #999;
 }
 
 html {
@@ -160,6 +160,16 @@ a {
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
   margin-bottom: 80px;
+  position: relative;
+}
+
+img.td {
+  width: 700px;
+  position: absolute;
+  left: -150px;
+  top: 20px;
+  z-index: -1;
+  transform: rotate(220deg);
 }
 
 .home .navbar {
@@ -177,7 +187,7 @@ a {
 }
 
 h1 {
-  margin: 0 85px;
+  margin-left: 250px;
   font-size: 6.5em;
 }
 
@@ -358,5 +368,14 @@ h3:not(.education h3) {
 
   .education .detail {
     width: 500px;
+  }
+
+  img.td {
+    width: 1000px;
+    position: absolute;
+    left: -300px;
+    top: 20px;
+    z-index: -1;
+    transform: rotate(220deg);
   }
 }
