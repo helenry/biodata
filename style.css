@@ -43,7 +43,6 @@ tt,
 var,
 b,
 u,
-i,
 center,
 dl,
 dt,
@@ -133,8 +132,8 @@ table {
   --text: black;
   --line: black; */
   --background: white;
-  --text: black;
-  --line: black;
+  --text: #222;
+  --line: #555;
 }
 
 html {
@@ -159,7 +158,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 0.5px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 80px;
 }
 
 .home .navbar {
@@ -178,7 +178,7 @@ a {
 
 h1 {
   margin: 0 85px;
-  font-size: 5em;
+  font-size: 6.5em;
 }
 
 .home .bottom {
@@ -200,35 +200,18 @@ h1 {
 /* home end */
 
 .about,
-.skills,
-.works,
 .education,
-.certification,
 .contact {
-  padding: 30px 0 90px;
+  padding: 12px 0 80px;
   margin: 0 85px;
 }
 
-.about,
-.skills,
-.works,
-.education,
-.certification {
-  border-bottom: 0.5px solid var(--line);
-}
-
-h2 {
-  /* font-weight: 500; */
-  font-size: 3em;
-  width: 600px;
-}
-
 .list {
-  font-size: 17px;
+  font-size: 16px;
   width: 1000px;
 }
 /* about start */
-.about {
+.about .content {
   display: flex;
   justify-content: space-between;
 }
@@ -240,11 +223,11 @@ h2 {
 
 .about .list div:not(:last-child) {
   border-bottom: 1px solid var(--line);
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 .about .list div:not(:first-child) {
-  padding-top: 20px;
+  padding-top: 12px;
 }
 /* about end */
 
@@ -259,9 +242,35 @@ h2 {
 /* works end */
 
 /* education start */
-.education {
+.education .content {
   display: flex;
   justify-content: space-between;
+}
+
+.education .detail {
+  width: 450px;
+}
+
+.education .detail div h3 {
+  width: 250px;
+}
+
+.education .detail div {
+  display: flex;
+  align-items: center;
+}
+
+.education .detail div:not(:last-child) {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 25px;
+}
+
+.education .detail div.startyear {
+  border-top: 1px solid var(--line);
+}
+
+.education .detail div:not(:first-child) {
+  padding-top: 12px;
 }
 
 .education .list {
@@ -269,22 +278,34 @@ h2 {
   justify-content: space-between;
 }
 
-.education h3 {
-  font-size: 1.3em;
-}
-
 .education img {
   width: 250px;
+  border-radius: 15px;
+}
+
+.education h3 {
+  font-size: 1.1em;
+}
+
+.education h3.name {
+  font-size: 1.3em;
+  margin-bottom: 50px;
 }
 /* education end */
 
-/* certification start */
-.certification {
-}
-/* certification end */
-
 /* contact start */
-.contact {
+div h2.section {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+  font-size: 3em;
+  margin-bottom: 12px;
+}
+
+div.empty {
+  width: 600px;
+}
+
+.contact .content {
   display: flex;
   justify-content: space-between;
 }
@@ -299,8 +320,8 @@ h2 {
 }
 
 h3:not(.education h3) {
-  font-size: 1.3em;
   width: 250px;
+  font-size: 1.1em;
 }
 
 .socials h3 {
@@ -314,11 +335,11 @@ h3:not(.education h3) {
 
 .contact .list div:not(:last-child) {
   border-bottom: 1px solid var(--line);
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 .contact .list div:not(:first-child) {
-  padding-top: 20px;
+  padding-top: 12px;
 }
 
 .contact li:not(:last-child) {
@@ -333,5 +354,9 @@ h3:not(.education h3) {
 
   .education img {
     width: 450px;
+  }
+
+  .education .detail {
+    width: 500px;
   }
 }
