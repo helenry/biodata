@@ -213,16 +213,34 @@ h1 {
   padding: 12px 0 100px;
 }
 
-.list {
-  font-size: 16px;
-  width: 1000px;
-}
-/* about start */
-.about .content {
+.about .content,
+.education .content,
+.contact .content {
   display: flex;
   justify-content: space-between;
 }
 
+div.empty {
+  width: 600px;
+}
+
+h2 {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+  font-size: 4.2em;
+  margin-bottom: 50px;
+}
+
+h3:not(.education h3.name) {
+  width: 250px;
+}
+
+.list {
+  font-size: 16px;
+  width: 1000px;
+}
+
+/* about start */
 .about .list div {
   display: flex;
   align-items: center;
@@ -238,22 +256,7 @@ h1 {
 }
 /* about end */
 
-/* skills start */
-.skills {
-}
-/* skills end */
-
-/* works start */
-.works {
-}
-/* works end */
-
 /* education start */
-.education .content {
-  display: flex;
-  justify-content: space-between;
-}
-
 .education .detail {
   width: 450px;
 }
@@ -336,22 +339,6 @@ h1 {
 /* education end */
 
 /* contact start */
-div h2.section {
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 12px;
-  font-size: 4.2em;
-  margin-bottom: 50px;
-}
-
-div.empty {
-  width: 600px;
-}
-
-.contact .content {
-  display: flex;
-  justify-content: space-between;
-}
-
 .contact a {
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.1s;
@@ -359,10 +346,6 @@ div.empty {
 
 .contact a:hover {
   border-bottom: 2px solid var(--text);
-}
-
-h3:not(.education h3.name) {
-  width: 250px;
 }
 
 .socials h3 {
