@@ -131,7 +131,7 @@ table {
   /* --background: white;
   --text: black;
   --line: black; */
-  --background: rgb(12, 12, 12);
+  --background: black;
   --text: #ddd;
   --line: #777;
 }
@@ -151,6 +151,60 @@ body {
 a {
   color: var(--text);
   text-decoration: none;
+}
+
+.button {
+  position: relative;
+  margin-top: 35px;
+  background-image: url("img/3d.png");
+  background-position: 53% 42%;
+  width: 200px;
+  height: 50px;
+}
+
+.button a:hover {
+  background-color: transparent;
+}
+
+.button a {
+  display: flex;
+  align-items: center;
+  font-size: 16.5px;
+  width: 196px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+.button a p {
+  background-color: var(--background);
+  height: 46px;
+  margin-right: 2px;
+  width: 150px;
+  text-align: center;
+  line-height: 46px;
+}
+
+.button div.arrow {
+  height: 46px;
+  width: 46px;
+  background-color: rgb(12, 12, 12);
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button a p:hover ~ div.arrow,
+.button .arrow:hover,
+.button a:hover ~ div.arrow,
+.button:hover ~ div.arrow {
+  background-color: rgb(12, 12, 12, 0);
+}
+
+.button .arrow img.arrow {
+  width: 26.5px;
+  height: 26.5px;
 }
 
 /* home start */
@@ -182,12 +236,16 @@ img.td {
 }
 
 .home .navbar a {
-  margin-left: 70px;
+  margin-left: 60px;
 }
 
 h1 {
-  margin-left: 400px;
+  margin: 60px 0 25px 400px;
   font-size: 6.5em;
+}
+
+.home .button {
+  margin-left: 700px;
 }
 
 .home .bottom {
@@ -207,21 +265,14 @@ h1 {
 }
 /* home end */
 
-.about,
-.education,
-.contact {
+.body {
   padding: 12px 0 100px;
 }
 
-.about .content,
-.education .content,
-.contact .content {
+.body .content:not(.certification .content) {
   display: flex;
-  justify-content: space-between;
-}
-
-div.empty {
-  width: 600px;
+  justify-content: end;
+  padding-left: 500px;
 }
 
 h2 {
@@ -241,18 +292,22 @@ h3:not(.education h3.name) {
 }
 
 /* about start */
-.about .list div {
+.about .list div:not(.button, .arrow) {
   display: flex;
   align-items: center;
 }
 
-.about .list div:not(:last-child) {
+.about .list div:not(.button, .arrow) {
   border-bottom: 1px solid var(--line);
   padding-bottom: 15px;
 }
 
-.about .list div:not(:first-child) {
+.about .list div:not(.name, .button, .arrow) {
   padding-top: 15px;
+}
+
+.about .button {
+  background-position: 40% 60%;
 }
 /* about end */
 
@@ -270,7 +325,7 @@ h3:not(.education h3.name) {
   align-items: center;
 }
 
-.education .detail div:not(.schedule, .border) {
+.education .detail div:not(.button, .arrow) {
   border-bottom: 1px solid var(--line);
   padding-bottom: 15px;
 }
@@ -279,7 +334,7 @@ h3:not(.education h3.name) {
   border-top: 1px solid var(--line);
 }
 
-.education .detail div:not(:first-child, .schedule, .border) {
+.education .detail div:not(:first-child, .button, .arrow) {
   padding-top: 15px;
 }
 
@@ -298,45 +353,58 @@ h3:not(.education h3.name) {
   margin-bottom: 50px;
 }
 
-.schedule a {
-  display: flex;
-  align-items: center;
-  font-size: 16.5px;
-  justify-content: center;
-  width: 180px;
-  height: 50px;
-}
-
-.schedule {
-  position: relative;
-  margin-top: 35px;
-  background-image: url("img/3d.png");
-  background-position: 49% 67%;
-  border-radius: 70px;
-  width: 180px;
-  height: 50px;
-}
-
-.border:hover {
-  background-color: transparent;
-}
-
-.border {
-  background-color: var(--background);
-  width: 176px;
-  height: 46px;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  border-radius: 70px;
-  transition: background-color 0.3s;
-}
-
-.education .schedule img {
-  width: 26.5px;
-  margin-left: 5px;
+.education .button {
+  background-position: 30% 80%;
 }
 /* education end */
+
+/* certification start */
+.certification .list {
+  width: 100%;
+}
+
+.certification .sublist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.certification .sublist:first-child {
+  margin-bottom: 30px;
+}
+
+.certification .group {
+  background: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text);
+  padding: 15px;
+}
+
+.certification img {
+  width: 375px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.certification .group p:nth-child(2) {
+  margin-bottom: 10px;
+  color: rgb(196, 196, 196);
+}
+
+.certification .group p:nth-child(3) {
+  margin-bottom: 7px;
+  font-size: 1.2em;
+}
+
+.certification .group p:nth-child(4) {
+  width: 350px;
+  line-height: 1.2em;
+}
+/* certification end */
 
 /* contact start */
 .contact a {
@@ -344,7 +412,7 @@ h3:not(.education h3.name) {
   transition: border-bottom 0.1s;
 }
 
-.contact a:hover {
+.contact a:hover:not(.button a) {
   border-bottom: 2px solid var(--text);
 }
 
@@ -372,6 +440,10 @@ h3:not(.education h3.name) {
 /* contact end */
 
 @media only screen and (min-width: 1920px) {
+  .home .button {
+    margin-left: 950px;
+  }
+
   .list {
     width: 1100px;
   }
@@ -382,6 +454,10 @@ h3:not(.education h3.name) {
 
   .education .detail {
     width: 500px;
+  }
+
+  .certification img {
+    width: 530px;
   }
 
   h1 {
