@@ -131,7 +131,7 @@ table {
   /* --background: white;
   --text: black;
   --line: black; */
-  --background: rgb(12, 12, 12);
+  --background: black;
   --text: #ddd;
   --line: #777;
 }
@@ -147,6 +147,7 @@ body {
   font-weight: 400;
   margin: 0 75px;
   padding-bottom: 100px;
+  position: relative;
 }
 
 a {
@@ -165,38 +166,82 @@ a {
 }
 
 .navbar a {
-  margin-left: 70px;
+  margin-left: 60px;
 }
 /* navbar end */
 
 h2 {
-  margin-top: 150px;
+  margin-top: 100px;
   font-size: 5em;
-  border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
   margin-bottom: 50px;
+  border-bottom: 1px solid rgb(88, 88, 88);
 }
 
 /* schedule start */
+img.td {
+  width: 1500px;
+  top: 100px;
+  left: -50px;
+  transform: rotate(-5deg);
+  position: fixed;
+  z-index: -1;
+}
+
 .schedule {
   display: flex;
   justify-content: space-between;
 }
 
 h3 {
-  width: 600px;
+  margin-bottom: 50px;
+  font-size: 1.25em;
+}
+
+.options li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.options li:first-child a {
+  border-bottom: 2px solid var(--text);
+}
+
+.options li a {
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: border-bottom 0.1s;
+}
+
+.options ul li {
+  padding-bottom: 2px;
+}
+
+.options li a:hover {
+  border-bottom: 2px solid var(--text);
+}
+
+div.table {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text);
+  padding: 50px 75px;
+  width: 750px;
 }
 
 table {
-  width: 1000px;
+  width: 100%;
 }
 
 table td {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgb(156, 156, 156);
   padding-bottom: 15px;
 }
 
-table td:first-child {
+table tr td:first-child {
   width: 320px;
 }
 
@@ -212,13 +257,24 @@ table tr:not(:first-child) td {
   padding-top: 15px;
 }
 
+table tr:not(:first-child):hover {
+  background-color: rgba(0, 0, 0, 0.404);
+}
+
 tr:first-child td {
-  padding-bottom: 30px;
+  border-top: 1px solid rgb(156, 156, 156);
+  padding: 20px 0;
 }
 /* schedule end */
 
 @media only screen and (min-width: 1920px) {
-  table {
-    width: 1100px;
+  img.td {
+    width: 2000px;
+    top: 100px;
+    left: -50px;
+  }
+
+  div.table {
+    width: 1000px;
   }
 }
