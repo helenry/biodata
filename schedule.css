@@ -128,9 +128,6 @@ table {
 /* css reset end */
 
 :root {
-  /* --background: white;
-  --text: black;
-  --line: black; */
   --background: black;
   --text: #ddd;
   --line: #777;
@@ -198,24 +195,25 @@ img.td {
 
 h3 {
   margin-bottom: 50px;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  text-transform: lowercase;
+}
+
+h3::first-letter {
+  text-transform: capitalize;
 }
 
 .options li:not(:last-child) {
   margin-bottom: 15px;
 }
 
-.options li:first-child a {
-  border-bottom: 2px solid var(--text);
-}
-
 .options li a {
-  border-bottom: 2px solid transparent;
   cursor: pointer;
   transition: border-bottom 0.1s;
 }
 
 .options ul li {
+  border-bottom: 2px solid transparent;
   padding-bottom: 2px;
 }
 
@@ -233,6 +231,10 @@ div.table {
   color: var(--text);
   padding: 50px 75px;
   width: 750px;
+}
+
+.underline {
+  border-bottom: 2px solid var(--text);
 }
 
 table {
@@ -258,6 +260,10 @@ table td:nth-child(3) {
 
 table tr:not(:first-child) td {
   padding-top: 15px;
+}
+
+table tr:not(:first-child) {
+  transition: background-color 0.1s;
 }
 
 table tr:not(:first-child):hover {
