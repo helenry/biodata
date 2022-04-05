@@ -198,25 +198,25 @@ img.td {
 
 h3 {
   margin-bottom: 50px;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  text-transform: lowercase;
+}
+
+h3::first-letter {
+  text-transform: capitalize;
 }
 
 .options li:not(:last-child) {
   margin-bottom: 15px;
 }
 
-.options li:first-child a {
-  border-bottom: 2px solid var(--text);
-}
-
 .options li a {
-  border-bottom: 2px solid transparent;
   cursor: pointer;
   transition: border-bottom 0.1s;
-  width: 100%;
 }
 
 .options ul li {
+  border-bottom: 2px solid transparent;
   padding-bottom: 2px;
 }
 
@@ -236,6 +236,10 @@ div.table {
   width: 750px;
 }
 
+.underline {
+  border-bottom: 2px solid var(--text);
+}
+
 table {
   width: 100%;
 }
@@ -243,10 +247,11 @@ table {
 table td {
   border-bottom: 1px solid rgb(156, 156, 156);
   padding-bottom: 15px;
+  width: 100%;
 }
 
 table tr td:first-child {
-  width: 220px;
+  width: 300px;
 }
 
 table td:nth-child(2) {
@@ -259,6 +264,10 @@ table td:nth-child(3) {
 
 table tr:not(:first-child) td {
   padding-top: 15px;
+}
+
+table tr:not(:first-child) {
+  transition: background-color 0.1s;
 }
 
 table tr:not(:first-child):hover {
