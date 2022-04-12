@@ -14,22 +14,57 @@
             <li><a href="index.html#about">About</a></li
             <li><a href="index.html#education">Education</a></li>
             <li><a href="index.html#certification">Certification</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#contact">Contact Me</a></li>
         </ul>
     </div>
-    <h2>CONTACT ME</h2>
+    <h2>Contact Me</h2>
     <img src="img/3d2.jpg" alt="" class="td">
     <div class="contact">
         <div class="empty"></div>
         <div class="form">
-            <form action="">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Subject">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-                <input type="submit" name="" id="" class="submit" value="Send me a message">
+            <form action="" id="sendMessage" name="sendMessage" onsubmit="return validateForm()" required>
+                <input type="text" class="input" name="name" placeholder="Name">
+                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAABkElEQVQokZWSMW7bQBREZz5JtbYUho4AlwZyg6hRqvgCKYIcIBcQIGVNn4DgqlEbJHUAHyJIERX2GYK0jkxRMF2a8O53YxjSigiQ3+1gBvP+7hId8/f8/CUfHkYCpB6oNY6vhkWxDn3cPqyNee1IQ+9rFVlCdQ0gIzAmMIBqmc3nv/fCN7PZKUQ+JKQZlOVd2HI7mRy2vZ5V4OKVtT92Gm+M+aIBSTgKsDLma5XnJwAgAOBIk5CGgG6bV8ZcBDtq0raf4f0ZAMhqNsvofd2FSuA01PqLRaOqzfV0msYg36jI8l+4e/giy0RkJEK+oHP1/4TpXKWqaexVN4iitLtCv3XKUZQJUIvG8RVV33aagF+dzd6P70UuZVgUawKD28nkcM9Efgq1Js/7IA+Oi2IjT3jl0wfYeecja98HJGy9t1AtgS3zyph3BD722tb0F4umq7H13jrg+9DanzthAKjy/ATen6lqoyJLOldpFGX0fgzyAKrl0Xz+53mtrgu5nk7TJI5HqpqSrO9FLo+LYhP6HgEDAa/mFNlrgQAAAABJRU5ErkJggg==">Please fill your name.</p>
+                <input type="email" class="input" name="email" placeholder="Email">
+                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAABkElEQVQokZWSMW7bQBREZz5JtbYUho4AlwZyg6hRqvgCKYIcIBcQIGVNn4DgqlEbJHUAHyJIERX2GYK0jkxRMF2a8O53YxjSigiQ3+1gBvP+7hId8/f8/CUfHkYCpB6oNY6vhkWxDn3cPqyNee1IQ+9rFVlCdQ0gIzAmMIBqmc3nv/fCN7PZKUQ+JKQZlOVd2HI7mRy2vZ5V4OKVtT92Gm+M+aIBSTgKsDLma5XnJwAgAOBIk5CGgG6bV8ZcBDtq0raf4f0ZAMhqNsvofd2FSuA01PqLRaOqzfV0msYg36jI8l+4e/giy0RkJEK+oHP1/4TpXKWqaexVN4iitLtCv3XKUZQJUIvG8RVV33aagF+dzd6P70UuZVgUawKD28nkcM9Efgq1Js/7IA+Oi2IjT3jl0wfYeecja98HJGy9t1AtgS3zyph3BD722tb0F4umq7H13jrg+9DanzthAKjy/ATen6lqoyJLOldpFGX0fgzyAKrl0Xz+53mtrgu5nk7TJI5HqpqSrO9FLo+LYhP6HgEDAa/mFNlrgQAAAABJRU5ErkJggg==">Please fill your e-mail.</p>
+                <input type="text" class="input" name="subject" placeholder="Subject">
+                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAABkElEQVQokZWSMW7bQBREZz5JtbYUho4AlwZyg6hRqvgCKYIcIBcQIGVNn4DgqlEbJHUAHyJIERX2GYK0jkxRMF2a8O53YxjSigiQ3+1gBvP+7hId8/f8/CUfHkYCpB6oNY6vhkWxDn3cPqyNee1IQ+9rFVlCdQ0gIzAmMIBqmc3nv/fCN7PZKUQ+JKQZlOVd2HI7mRy2vZ5V4OKVtT92Gm+M+aIBSTgKsDLma5XnJwAgAOBIk5CGgG6bV8ZcBDtq0raf4f0ZAMhqNsvofd2FSuA01PqLRaOqzfV0msYg36jI8l+4e/giy0RkJEK+oHP1/4TpXKWqaexVN4iitLtCv3XKUZQJUIvG8RVV33aagF+dzd6P70UuZVgUawKD28nkcM9Efgq1Js/7IA+Oi2IjT3jl0wfYeecja98HJGy9t1AtgS3zyph3BD722tb0F4umq7H13jrg+9DanzthAKjy/ATen6lqoyJLOldpFGX0fgzyAKrl0Xz+53mtrgu5nk7TJI5HqpqSrO9FLo+LYhP6HgEDAa/mFNlrgQAAAABJRU5ErkJggg==">Please fill the subject.</p>
+                <textarea name="message" class="input" cols="30" rows="10" placeholder="Your message"></textarea>
+                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAABkElEQVQokZWSMW7bQBREZz5JtbYUho4AlwZyg6hRqvgCKYIcIBcQIGVNn4DgqlEbJHUAHyJIERX2GYK0jkxRMF2a8O53YxjSigiQ3+1gBvP+7hId8/f8/CUfHkYCpB6oNY6vhkWxDn3cPqyNee1IQ+9rFVlCdQ0gIzAmMIBqmc3nv/fCN7PZKUQ+JKQZlOVd2HI7mRy2vZ5V4OKVtT92Gm+M+aIBSTgKsDLma5XnJwAgAOBIk5CGgG6bV8ZcBDtq0raf4f0ZAMhqNsvofd2FSuA01PqLRaOqzfV0msYg36jI8l+4e/giy0RkJEK+oHP1/4TpXKWqaexVN4iitLtCv3XKUZQJUIvG8RVV33aagF+dzd6P70UuZVgUawKD28nkcM9Efgq1Js/7IA+Oi2IjT3jl0wfYeecja98HJGy9t1AtgS3zyph3BD722tb0F4umq7H13jrg+9DanzthAKjy/ATen6lqoyJLOldpFGX0fgzyAKrl0Xz+53mtrgu5nk7TJI5HqpqSrO9FLo+LYhP6HgEDAa/mFNlrgQAAAABJRU5ErkJggg==">Please fill the message.</p>
+                <input type="submit" name="submit" id="" class="submit" value="Send me a message">
+                <p class="submit"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAABwklEQVQokX2RQUtUcRTFf+eviwqCZJC2rcYmw1WIJCVIn0AwXbYPmnkGLqKez3HWvudnaKUSBLVWC2oQl2HzpqIPIFnQ2nmnhY04Onp393J+3HPvEX0qyatjwWFC0pDtP0AzrqRfzup0uqm3oweYFHwDwrbxocQQ5pHh94BVfVlZ/XwOrrcWniA3bFWXKqtvepw4Cfr2d1Z2ZnlxaSR7fQL/37hedHiYjKY/+p0CkLQWykH+gD0TV7JmAMCkFk8vAxvtaBx1rliqWcoAQpJXx4DrcTl9exFYb0VThXkXAlfj8uqGYDj5/vxOCA4TxtsSvghEbMiei8truxIWbIWicz8IlYBfAPX9aLSRR/f6ga8q2U53XsgHKsLw4HEcugXAYHGtcHhfb0WPhWWxfhYEkMNNh+JnAJrANEA8srYnew6xaakvaCPwNEdqArCcR3srrdrM6c822tF43x+0o/nlPNqFbs55bRLYKDqauiyulbw6YsJOT87x7eyTrRdhgI/L+cLssbVeq/V2NG/CjuXFuJI1TzafWMprkxBScAm0ZXwoNAyeNhzIrnXBc3C3kq/P7oaBMCGHklUccqRmPJrun9X9A/Nn4bMrh21rAAAAAElFTkSuQmCC">Your message is sent.</p>
             </form>
         </div>
     </div>
+
+    <script>
+        const alert = document.querySelectorAll('p');
+        for (let i = 0; i < 5; i++) {
+            alert[i].style.display = "none";
+        }
+
+        function validateForm() {
+            let input = document.getElementsByClassName("input");
+
+            for (let i = 0; i < 5; i++) {
+                alert[i].style.display = "none";
+            }
+
+            for (let i = 0; i < 4; i++) {
+                input[i].style.borderColor = "";
+                if (input[i].value == "" || input[i].value == null) {
+                    alert[i].style.display = "";
+                    input[i].style.borderColor = "#e97676";
+                    return false;
+                }
+            }
+
+            // let submit = document.getElementById("submit");
+            // submit.addEventListener("click", function () {
+            //     alert[4].style.display = "";
+            // });
+        }
+        
+    </script>
 </body>
 </html>
