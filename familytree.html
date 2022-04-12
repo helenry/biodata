@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <link rel="stylesheet" href="familytree.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#certification">Certification</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+    <h2>Family Tree</h2>
+    <img src="img/3d2.jpg" alt="" class="td">
+    <div class="schedule">
+        <div class="options">
+            <ul>
+                <li><a>1<sup>ST</sup> GENERATION</a></li>
+                <li><a>2<sup>ND</sup> GENERATION</a></li>
+                <li><a>3<sup>RD</sup> GENERATION</a></li>
+            </ul>
+        </div>
+        <div class="diagram">
+            <h3>3 Generations</h3>
+            <div class="content">
+                <div class="left">
+                    <div class="first">
+                        <div class="gp group">
+                            <p>Effendi Husin</p>
+                            <p>Grandfather</p>
+                        </div>
+                        <div class="gm group">
+                            <p>Lim Khiok Nie</p>
+                            <p>Grandmother</p>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div class="pp group">
+                            <p>Sulaiman</p>
+                            <p>Father</p>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="me group">
+                            <p>Helen Ruth Yemima</p>
+                            <p>Me</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="first">
+                        <div class="gp group">
+                            <p>Chin Siu Lim</p>
+                            <p>Grandfather</p>
+                        </div>
+                        <div class="gm group">
+                            <p>Tjong Tjuk Tjhin</p>
+                            <p>Grandmother</p>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div class="mm group">
+                            <p>Jun Li</p>
+                            <p>Mother</p>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="bt group">
+                            <p>Daniel Jeremy</p>
+                            <p>Brother</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const title = document.querySelector("h3");
+        const options = document.querySelectorAll(".options ul li a");
+        const first = document.querySelectorAll(".first .group");
+        const second = document.querySelectorAll(".second .group");
+        const third = document.querySelectorAll(".third .group");
+        const update = "0 0 10px 3px rgba(255, 255, 255, 0.5)";
+        const def = "0 8px 32px 0 rgba(31, 38, 135, 0.37)";
+
+
+        for (let i = 0; i < options.length; i++) {
+            options[i].addEventListener("click", function() {
+                title.innerHTML = options[i].innerHTML;
+                if (i == 0) {
+                    for (let j = 0; j < first.length; j++) {
+                        first[j].style.boxShadow = update;
+                    }
+                } else if (i == 1) {
+                    for (let j = 0; j < second.length; j++) {
+                        second[j].style.boxShadow = update;
+                    }
+                } else if (i == 2) {
+                    for (let j = 0; j < third.length; j++) {
+                        third[j].style.boxShadow = update;
+                    }
+                }
+                options[i].classList.add("underline");
+                for (let j = 0; j < options.length; j++) {
+                    if (j !== i) {
+                        options[j].classList.remove("underline");
+                        if (j == 0) {
+                            for (let j = 0; j < first.length; j++) {
+                                first[j].style.boxShadow = def;
+                            }
+                        } else if (j == 1) {
+                            for (let j = 0; j < second.length; j++) {
+                                second[j].style.boxShadow = def;
+                            }
+                        } else if (j == 2) {
+                            for (let j = 0; j < third.length; j++) {
+                                third[j].style.boxShadow = def;
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
