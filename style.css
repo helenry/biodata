@@ -155,11 +155,14 @@ a {
 
 .button {
   position: relative;
-  margin-top: 35px;
   background-image: url("img/3d.png");
   background-position: 53% 42%;
-  width: 200px;
+  width: fit-content;
   height: 50px;
+}
+
+.home .button {
+  width: 200px;
 }
 
 .button a:hover {
@@ -170,6 +173,9 @@ a {
   display: flex;
   align-items: center;
   font-size: 16.5px;
+}
+
+.home .button a {
   width: 196px;
   position: absolute;
   left: 2px;
@@ -178,28 +184,49 @@ a {
 
 .button a p {
   background-color: var(--background);
-  height: 46px;
-  margin-right: 2px;
+  height: 48px;
+  transition: background-color 0.3s;
+  font-size: 1.15em;
   width: 150px;
-  text-align: center;
   line-height: 46px;
 }
 
-.button div.arrow {
+.home .button a p {
   height: 46px;
-  width: 46px;
-  background-color: rgb(12, 12, 12);
-  transition: background-color 0.3s;
+  margin-right: 2px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.button div.arrow {
+  height: 48px;
+  width: 48px;
+  background-color: var(--background);
+  transition: background-color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.button a p:hover ~ div.arrow,
-.button .arrow:hover,
-.button a:hover ~ div.arrow,
-.button:hover ~ div.arrow {
-  background-color: rgb(12, 12, 12, 0);
+.home .button div.arrow {
+  height: 46px;
+  width: 46px;
+}
+
+.home .button a p:hover ~ div.arrow,
+.home .button .arrow:hover,
+.home .button a:hover ~ div.arrow {
+  background-color: transparent;
+}
+
+.button div.arrow:hover ~ img.arrow,
+.button a p:hover ~ div.arrow img.arrow,
+.button a:hover img.arrow {
+  transform: rotate(45deg);
+}
+
+img.arrow {
+  transition: transform 0.3s;
 }
 
 .button .arrow img.arrow {
@@ -272,16 +299,20 @@ h1 {
   padding: 12px 0 100px;
 }
 
-.body .content:not(.certification .content) {
+.body .content {
   display: flex;
   justify-content: end;
-  padding-left: 500px;
+}
+
+.about .content,
+.education .content {
+  justify-content: space-between;
 }
 
 h2 {
   border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
-  font-size: 4.2em;
+  font-size: 4.75em;
   margin-bottom: 50px;
 }
 
@@ -291,7 +322,7 @@ h3:not(.education h3.name) {
 
 .list {
   font-size: 16px;
-  width: 1000px;
+  width: 65%;
 }
 
 /* about start */
@@ -311,6 +342,11 @@ h3:not(.education h3.name) {
 
 .about .button {
   background-position: 40% 60%;
+}
+
+.about div.button:last-child {
+  margin-top: 20px;
+  background-position: 60% 40%;
 }
 /* about end */
 
@@ -362,22 +398,37 @@ h3:not(.education h3.name) {
 /* education end */
 
 /* certification start */
+.certification {
+  position: relative;
+}
+
 .certification .list {
-  width: 100%;
-}
-
-.certification .sublist {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  overflow: auto;
+  padding-bottom: 30px;
 }
 
-.certification .sublist:first-child {
-  margin-bottom: 30px;
+/* width */
+.certification .list::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* Track */
+.certification .list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+}
+
+/* Handle */
+.certification .list::-webkit-scrollbar-thumb {
+  background: var(--text);
+  border-radius: 10px;
 }
 
 .certification .group {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   border-radius: 10px;
@@ -389,12 +440,17 @@ h3:not(.education h3.name) {
 
 .certification .group:hover {
   background: rgba(255, 255, 255, 0.175);
+  cursor: pointer;
 }
 
 .certification img {
-  width: 375px;
+  width: 325px;
   border-radius: 10px;
   margin-bottom: 15px;
+}
+
+.certification .group:not(:last-child) {
+  margin-right: 25px;
 }
 
 .certification .group p:nth-child(2) {
@@ -404,12 +460,80 @@ h3:not(.education h3.name) {
 
 .certification .group p:nth-child(3) {
   margin-bottom: 7px;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  line-height: 1.2em;
 }
 
 .certification .group p:nth-child(4) {
-  width: 350px;
-  line-height: 1.2em;
+  line-height: 1.1em;
+}
+
+.certification .fullimage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  color: var(--text);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certification .fullimage img.icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.certification .fullimage img.full {
+  height: 90%;
+  width: auto;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.certification .info {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  background-color: var(--background);
+  padding: 0 35px;
+}
+
+.certification .info img {
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.info p:nth-child(2) {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #c4c4c4;
+}
+
+.info p:nth-child(3) {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+
+.info p:nth-child(4) {
+  font-size: 1.3em;
+  line-height: 27px;
 }
 /* certification end */
 
@@ -451,10 +575,6 @@ h3:not(.education h3.name) {
     margin-left: 950px;
   }
 
-  .list {
-    width: 1100px;
-  }
-
   .education img {
     width: 450px;
   }
@@ -464,7 +584,7 @@ h3:not(.education h3.name) {
   }
 
   .certification img {
-    width: 530px;
+    width: 430px;
   }
 
   h1 {
