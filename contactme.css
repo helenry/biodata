@@ -229,7 +229,7 @@ textarea {
   border-radius: 10px;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 0.9em;
   resize: none;
 }
@@ -250,11 +250,28 @@ textarea:active {
   color: rgba(221, 221, 221, 0.9);
 }
 
+p {
+  /* padding-left: 15px; */
+  font-size: 0.85em;
+  margin-bottom: 16px;
+  color: #e97676;
+  display: flex;
+  align-items: center;
+}
+
+p img {
+  margin-right: 5px;
+}
+
 input.submit {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 175px;
   height: 50px;
   cursor: pointer;
+}
+
+p.submit {
+  color: #82d871;
 }
 /* schedule end */
 
